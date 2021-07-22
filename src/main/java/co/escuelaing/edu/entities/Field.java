@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class Field implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idField;
+    private String idField;
 
     @Column(name = "name")
     private String name;
@@ -33,7 +33,7 @@ public class Field implements Serializable {
     @Column(name = "picture")
     private String picture;
 
-    public Field(int idField, String name, String status, String requirements, String picture) {
+    public Field(String idField, String name, String status, String requirements, String picture) {
         this.idField = idField;
         this.name = name;
         this.status = status;
@@ -41,11 +41,11 @@ public class Field implements Serializable {
         this.picture = picture;
     }
 
-    public int getIdField() {
+    public String getIdField() {
         return idField;
     }
 
-    public void setIdField(int idField) {
+    public void setIdField(String idField) {
         this.idField = idField;
     }
 

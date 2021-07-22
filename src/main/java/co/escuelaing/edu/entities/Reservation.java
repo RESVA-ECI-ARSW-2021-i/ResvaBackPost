@@ -9,17 +9,17 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "reservation")
-public class reservation {
+public class Reservation {
     
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private int id;
+    private String id;
     
     @Column(name = "user")
-    private int user;
+    private String user;
 
     @Column(name = "field")
-    private int field;
+    private String field;
 
     @Column(name = "day")
     private String day;
@@ -27,7 +27,7 @@ public class reservation {
     @Column(name = "hour")
     private String hour;
 
-    public reservation(int id, int user, int field, String day, String hour) {
+    public Reservation(String id, String user, String field, String day, String hour) {
         this.id = id;
         this.user = user;
         this.field = field;
@@ -35,27 +35,27 @@ public class reservation {
         this.hour = hour;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
-    public int getField() {
+    public String getField() {
         return field;
     }
 
-    public void setField(int field) {
+    public void setField(String field) {
         this.field = field;
     }
 

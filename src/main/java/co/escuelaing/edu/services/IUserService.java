@@ -6,16 +6,10 @@ import java.util.List;
 
 public interface IUserService {
 
-    List<User> getUsers() throws ResvaException;
+    List<User> getAllUsers() throws ResvaException;
 
-    @Override
-    public String toString();
+    User authenticateUser(String username, String password) throws ResvaException;
 
-    @Override
-    public boolean equals(Object obj);
-
-    @Override
-    public int hashCode();
-
+    User findUsername(String username) throws ResvaException;
 
 }

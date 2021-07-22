@@ -27,9 +27,6 @@ public class User {
     private String name;
 
 
-    @Column(name = "phone")
-    private String phone;
-
     @Column(name = "identificationDocument")
     private String identificationDocument;
 
@@ -40,7 +37,6 @@ public class User {
         this.username = username;
         this.password = password;
         this.name = name;
-        this.phone = phone;
         this.identificationDocument = identificationDocument;
 
     }
@@ -77,13 +73,6 @@ public class User {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 
     public String getIdentificationDocument() {
         return identificationDocument;
@@ -100,7 +89,6 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
                 ", identificationDocument='" + identificationDocument + '\'' +
                 '}';
     }
